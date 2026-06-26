@@ -2,7 +2,10 @@
    Baby Movement Tracker
    app.js
 ========================================================== */
-
+function doGet() {
+  return ContentService
+    .createTextOutput("Baby Movement Tracker API is running");
+}
 let todayCount = 0;
 let lastMovement = "--";
 let timeline = [];
