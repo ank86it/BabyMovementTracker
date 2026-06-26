@@ -77,23 +77,17 @@ async function saveMovement(type) {
 
     try {
 
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
+        await fetch(GOOGLE_SCRIPT_URL, {
 
-            method: "POST",
+    method: "POST",
 
-            headers: {
+    mode: "no-cors",
 
-                "Content-Type": "application/json"
+    body: JSON.stringify(movement)
 
-            },
+});
 
-            body: JSON.stringify(movement)
 
-        });
-
-        const result = await response.json();
-
-        console.log(result);
 
     }
     catch (e) {
