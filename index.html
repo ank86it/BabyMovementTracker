@@ -1,10 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Baby Movement Tracker</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Baby Movement Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<meta name="theme-color" content="#ff6b9d">
+
+<link rel="manifest" href="manifest.json">
+
 </head>
+
 <body>
-    <h1>Baby Movement Tracker</h1>
-    <p>Website setup successful!</p>
+
+<div class="container">
+
+<header>
+
+<h1>❤️ Baby Movement Tracker</h1>
+
+<p id="todayDate"></p>
+
+<div class="summaryCard">
+
+<div class="summaryItem">
+<span class="label">Today's Count</span>
+<h2 id="todayCount">0</h2>
+</div>
+
+<div class="summaryItem">
+<span class="label">Last Movement</span>
+<h3 id="lastMovement">--</h3>
+</div>
+
+</div>
+
+</header>
+
+<section class="movementSection">
+
+<h2>Record Baby Movement</h2>
+
+<button class="movementButton flutter"
+onclick="saveMovement('Flutters & Bubbles')">
+
+🫧
+<br>
+Flutters & Bubbles
+
+</button>
+
+<button class="movementButton kick"
+onclick="saveMovement('Kicks & Jabs')">
+
+👣
+<br>
+Kicks & Jabs
+
+</button>
+
+<button class="movementButton roll"
+onclick="saveMovement('Rolls & Turns')">
+
+🔄
+<br>
+Rolls & Turns
+
+</button>
+
+<button class="movementButton hiccup"
+onclick="saveMovement('Hiccups')">
+
+💓
+<br>
+Hiccups
+
+</button>
+
+<button class="movementButton stretch"
+onclick="saveMovement('Stretches')">
+
+🤲
+<br>
+Stretches
+
+</button>
+
+</section>
+
+<section class="timeline">
+
+<h2>Today's Timeline</h2>
+
+<div id="timeline">
+
+No movement recorded today.
+
+</div>
+
+</section>
+
+<footer>
+
+<button class="bottomButton">
+
+📊 Statistics
+
+</button>
+
+<button class="bottomButton">
+
+📅 Calendar
+
+</button>
+
+<button class="bottomButton">
+
+📄 Export
+
+</button>
+
+</footer>
+
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
