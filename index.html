@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Baby Movement Tracker</title>
 
@@ -28,73 +29,90 @@
 <div class="summaryCard">
 
 <div class="summaryItem">
-<span class="label">Today's Count</span>
+
+<p class="label">Today's Count</p>
+
 <h2 id="todayCount">0</h2>
+
 </div>
 
 <div class="summaryItem">
-<span class="label">Last Movement</span>
+
+<p class="label">Last Movement</p>
+
 <h3 id="lastMovement">--</h3>
+
 </div>
 
 </div>
 
 </header>
 
-<section class="movementSection">
+<h2 class="sectionTitle">
+Record Baby Movement
+</h2>
 
-<h2>Record Baby Movement</h2>
+<div class="buttonGrid">
 
-<button class="movementButton flutter"
+<button
+class="movementButton flutter"
 onclick="saveMovement('Flutters & Bubbles')">
 
 🫧
-<br>
-Flutters & Bubbles
+
+<span>Flutters & Bubbles</span>
 
 </button>
 
-<button class="movementButton kick"
+<button
+class="movementButton kick"
 onclick="saveMovement('Kicks & Jabs')">
 
 👣
-<br>
-Kicks & Jabs
+
+<span>Kicks & Jabs</span>
 
 </button>
 
-<button class="movementButton roll"
+<button
+class="movementButton roll"
 onclick="saveMovement('Rolls & Turns')">
 
 🔄
-<br>
-Rolls & Turns
+
+<span>Rolls & Turns</span>
 
 </button>
 
-<button class="movementButton hiccup"
+<button
+class="movementButton hiccup"
 onclick="saveMovement('Hiccups')">
 
 💓
-<br>
-Hiccups
+
+<span>Hiccups</span>
 
 </button>
 
-<button class="movementButton stretch"
+<button
+class="movementButton stretch"
 onclick="saveMovement('Stretches')">
 
 🤲
-<br>
-Stretches
+
+<span>Stretches</span>
 
 </button>
 
-</section>
+</div>
 
-<section class="timeline">
+<div class="timeline">
 
-<h2>Today's Timeline</h2>
+<h2>
+
+Today's Timeline
+
+</h2>
 
 <div id="timeline">
 
@@ -102,34 +120,46 @@ No movement recorded today.
 
 </div>
 
-</section>
+</div>
 
-<footer>
+<div class="bottomButtons">
 
-<button class="bottomButton">
+<button>
 
 📊 Statistics
 
 </button>
 
-<button class="bottomButton">
+<button>
 
 📅 Calendar
 
 </button>
 
-<button class="bottomButton">
+<button onclick="clearToday()">
 
-📄 Export
+🗑 Clear
 
 </button>
 
-</footer>
+</div>
 
 </div>
 
 <script src="config.js"></script>
+
 <script src="app.js"></script>
 
+<script>
+
+if ('serviceWorker' in navigator) {
+
+navigator.serviceWorker.register('sw.js');
+
+}
+
+</script>
+
 </body>
+
 </html>
