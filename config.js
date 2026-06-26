@@ -4,7 +4,7 @@
    ========================================================== */
 
 const GOOGLE_SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbwcpWfgoRYmKTL5jSQUVzJ1tqQetugBWPG5w_BiNEgIZZONrUEqGsB62CboWwJJDSDImA";
+"https://script.google.com/macros/s/AKfycbwcpWfgoRYmKTL5jSQUVzJ1tqQetugBWPG5w_BiNEgIZZONrUEqGsB62CboWwJJDSDImA/exec";
 
 /* Application Settings */
 
